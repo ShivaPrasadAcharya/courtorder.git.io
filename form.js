@@ -94,9 +94,42 @@ class FormManager {
             d: document.getElementById('description').value,
             dp: document.getElementById('descriptionPlus').value,
             c: {
-                s: document.getElementById('showCause').checked ? 1 : 0,
-                i: document.getElementById('interim').checked ? 1 : 0,
-                p: document.getElementById('priority').checked ? 1 : 0
+                ci: document.getElementById('civilCase').checked ? 1 : 0,
+                cr: document.getElementById('criminalCase').checked ? 1 : 0,
+                writ: document.getElementById('writCase').checked ? 1 : 0,
+                coc: document.getElementById('contemptofcourt').checked ? 1 : 0,
+                sc: document.getElementById('showCause').checked ? 1 : 0,
+                iodp: document.getElementById('interim order discussion postponed').checked ? 1 : 0,
+                ionifh: document.getElementById('interim order not issued postponed for full hearing').checked ? 1 : 0,
+                ioni: document.getElementById('interim order not issued').checked ? 1 : 0,
+                ioit: document.getElementById('interim order issued temporarily').checked ? 1 : 0,
+                ios: document.getElementById('interim order silent').checked ? 1 : 0,
+                ioi: document.getElementById('interim order isssued').checked ? 1 : 0,
+                efb: document.getElementById('extended full bench').checked ? 1 : 0,
+                fb: document.getElementById('full bench').checked ? 1 : 0,
+                si: document.getElementById('single bench').checked ? 1 : 0,
+                db: document.getElementById('division bench').checked ? 1 : 0,
+                cb: document.getElementById('constitutional bench').checked ? 1 : 0,
+                pg: document.getElementById('priority given').checked ? 1 : 0
+                pg: document.getElementById('priority not given').checked ? 1 : 0
+cb1=constitutional bench (संवैधानिक इजलास)
+coni0=certiorari order not issued
+coi1=certiorari order issued
+db1=double bench (संयुक्त इजलास)
+efb5=extended full bench of five judges
+fb1=full bench(पूर्ण इजलास)
+ioi1=interim order issued (अन्तरिम आदेश जारी)
+ioni0=interim order not issued (अन्तरिम आदेश जारी नहुने)
+moni0=mandatory order not issued
+moi1=mandatory order issued (उत्प्रेषण)
+pg1=preference given (अग्राधिकार)
+sb1=single bench (एकल इजलास)
+sc1=supreme court(सर्वोच्च अदालत)
+sco0=show caused ordered not issued (कारण देखाउन आदेश जारी नहुने)
+sco1=show cause order issued (कारण देखाउ आदेश जारी)
+wi1=writ issued (रिट जारी)
+wip1=writ issued partially (रिट जारी आंशिक)
+wq1=writ quashed (रिट खारेज)
             },
             cp: document.getElementById('categoryPlus').value,
             u: document.getElementById('url').value,
