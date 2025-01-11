@@ -33,7 +33,6 @@ class FormManager {
         document.addEventListener('click', (e) => {
             if (!e.target.closest('#formSection') && 
                 !e.target.closest('#addEntryBtn') && 
-                !e.target.closest('.edit-entry') && // Added this to prevent closing when clicking edit
                 !this.formSection.classList.contains('hidden')) {
                 this.hideForm();
             }
@@ -49,16 +48,8 @@ class FormManager {
     }
 
     showForm() {
-        // First make the form visible
         this.formSection.classList.remove('hidden');
-        
-        // Then scroll to it
-        setTimeout(() => {
-            this.formSection.scrollIntoView({ 
-                behavior: 'smooth', 
-                block: 'start' 
-            });
-        }, 100); // Small delay to ensure the form is visible before scrolling
+        this.formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
     hideForm() {
@@ -97,26 +88,6 @@ class FormManager {
         }
     }
 
-    populateForm(entry) {
-        // Show form first (important!)
-        this.showForm();
-
-        // Then populate the fields
-        document.getElementById('entryId').value = entry.i;
-        document.getElementById('description').value = entry.d;
-        document.getElementById('descriptionPlus').value = entry.dp || '';
-        document.getElementById('showCause').checked = entry.c.s === 1;
-        document.getElementById('interim').checked = entry.c.i === 1;
-        document.getElementById('priority').checked = entry.c.p === 1;
-        document.getElementById('categoryPlus').value = entry.cp || '';
-        document.getElementById('url').value = entry.u || '';
-        document.getElementById('urlName').value = entry.un || '';
-        document.getElementById('entryDate').value = entry.dt;
-
-        this.updateGeneratedCode();
-    }
-
-    // Rest of the methods remain the same...
     getFormData() {
         return {
             i: document.getElementById('entryId').value,
@@ -199,6 +170,22 @@ class FormManager {
         this.form.reset();
         this.codeField.value = '';
         this.clearErrors();
+    }
+
+    populateForm(entry) {
+        document.getElementById('entryId').value = entry.i;
+        document.getElementById('description').value = entry.d;
+        document.getElementById('descriptionPlus').value = entry.dp || '';
+        document.getElementById('showCause').checked = entry.c.s === 1;
+        document.getElementById('interim').checked = entry.c.i === 1;
+        document.getElementById('priority').checked = entry.c.p === 1;
+        document.getElementById('categoryPlus').value = entry.cp || '';
+        document.getElementById('url').value = entry.u || '';
+        document.getElementById('urlName').value = entry.un || '';
+        document.getElementById('entryDate').value = entry.dt;
+
+        this.updateGeneratedCode();
+        this.showForm();
     }
 
     showError(fieldId, message) {
