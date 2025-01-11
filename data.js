@@ -5,20 +5,47 @@ const MAX_ENTRIES = 7;
 // Sample initial data
 const initialData = {
     key: 'entrySystem',
-    entries: [{
-        i: '0001',
-        d: 'Example entry',
-        dp: '',
-        c: {
-            s: 1,
-            i: 0,
-            p: 1
-        },
-        cp: 'High',
-        u: '',
-        un: '',
-        dt: '2025-01-11'
-    }]
+    entries: [
+        {
+            i: '0001',
+            d: 'Example entry',
+            dp: '',
+            c: {
+                pq: 0,
+                pp: 0,
+                da: 0,
+                pa: 0,
+                doi: 0,
+                tax: 0,
+                uv: 0,
+                eq: 0,
+                rec: 0,
+                ree: 0,
+                ci: 0,
+                cr: 0,
+                writ: 0,
+                coc: 0,
+                sco: 0,
+                iodp: 0,
+                ionifh: 0,
+                ioni: 0,
+                ioit: 0,
+                ios: 0,
+                ioi: 0,
+                efb: 0,
+                fb: 0,
+                si: 0,
+                db: 0,
+                cb: 0,
+                pg: 0,
+                png: 0
+            },
+            cp: 'High',
+            u: '',
+            un: '',
+            dt: '2025-01-11'
+        }
+    ]
 };
 
 class DataManager {
@@ -80,7 +107,10 @@ class DataManager {
     }
 
     generateEntryCode(entry) {
-        return `{i:'${entry.i}',d:'${entry.d}',dp:'${entry.dp}',c:{s:${entry.c.s},i:${entry.c.i},p:${entry.c.p}},cp:'${entry.cp}',u:'${entry.u}',un:'${entry.un}',dt:'${entry.dt}'}`;
+        const fields = Object.keys(entry.c)
+            .map(key => `${key}:${entry.c[key]}`)
+            .join(',');
+        return `{i:'${entry.i}',d:'${entry.d}',dp:'${entry.dp}',c:{${fields}},cp:'${entry.cp}',u:'${entry.u}',un:'${entry.un}',dt:'${entry.dt}'}`;
     }
 }
 
