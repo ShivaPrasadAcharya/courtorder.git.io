@@ -1,7 +1,6 @@
 class EntrySystem {
     constructor() {
         this.entriesList = document.getElementById('entriesList');
-        this.formSection = document.getElementById('formSection');  // Add this line
         this.setupEventListeners();
         this.renderEntries(dataManager.getAllEntries());
     }
@@ -140,16 +139,7 @@ class EntrySystem {
     }
 
     handleEdit(entry) {
-        // Show form first
-        this.formSection.classList.remove('hidden');
-        
-        // Then populate form
         formManager.populateForm(entry);
-        
-        // Scroll to form with a small delay to ensure form is visible
-        setTimeout(() => {
-            this.formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 100);
     }
 
     showEmptyState() {
