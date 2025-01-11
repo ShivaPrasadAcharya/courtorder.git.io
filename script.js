@@ -138,26 +138,9 @@ class EntrySystem {
         return badges.join('');
     }
 
- handleEdit(entry) {
-        // Scroll to form section
-        document.getElementById('formSection').scrollIntoView({ behavior: 'smooth' });
-
-        // Populate form fields
-        document.getElementById('entryId').value = entry.i;
-        document.getElementById('description').value = entry.d;
-        document.getElementById('descriptionPlus').value = entry.dp;
-        document.getElementById('showCause').checked = entry.c.s === 1;
-        document.getElementById('interim').checked = entry.c.i === 1;
-        document.getElementById('priority').checked = entry.c.p === 1;
-        document.getElementById('categoryPlus').value = entry.cp;
-        document.getElementById('url').value = entry.u;
-        document.getElementById('urlName').value = entry.un;
-        document.getElementById('entryDate').value = entry.dt;
-
-        // Update generated code
-        formManager.updateGeneratedCode();
+    handleEdit(entry) {
+        formManager.populateForm(entry);
     }
-
 
     showEmptyState() {
         this.entriesList.innerHTML = `
