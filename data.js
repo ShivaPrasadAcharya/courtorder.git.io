@@ -7,7 +7,45 @@ const initialData = {
     key: 'entrySystem',
     entries: [
 {i:'0006',d:'ok ok ok ok',dp:'ok ok ok',c:{pq:0,pp:0,da:1,pa:0,doi:0,tax:0,uv:0,eq:0,rec:1,ree:0,ci:0,cr:0,writ:0,coc:0,sco:0,iodp:0,ionifh:0,ioni:0,ioit:0,ios:0,ioi:0,efb:0,fb:0,si:0,db:0,cb:0,pg:0,png:0},cp:'double tax',u:'',un:'',dt:'2081-09-27'};
-        {i:'0001',d:'Example entry',dp:'',c:{pq:0,pp:0,da:1,pa:0,doi:0,tax:0,uv:0,eq:0,rec:1,ree:0,ci:0,cr:0,writ:0,coc:0,sco:1,iodp:0,ionifh:0,ioni:0,ioit:0,ios:0,ioi:0,efb:0,fb:0,si:0,db:0,cb:0,pg:0,png:0},cp:'double tax',u:'',un:'',dt:'2025-01-11'}
+        {
+            i: '0001',
+            d: 'Example entry',
+            dp: '',
+            c: {
+                pq: 0,
+                pp: 0,
+                da: 0,
+                pa: 0,
+                doi: 0,
+                tax: 0,
+                uv: 0,
+                eq: 0,
+                rec: 0,
+                ree: 0,
+                ci: 0,
+                cr: 0,
+                writ: 0,
+                coc: 0,
+                sco: 0,
+                iodp: 0,
+                ionifh: 0,
+                ioni: 0,
+                ioit: 0,
+                ios: 0,
+                ioi: 0,
+                efb: 0,
+                fb: 0,
+                si: 0,
+                db: 0,
+                cb: 0,
+                pg: 0,
+                png: 0
+            },
+            cp: 'High',
+            u: '',
+            un: '',
+            dt: '2025-01-11'
+        }
     ]
 };
 
