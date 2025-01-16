@@ -95,10 +95,12 @@ class FormManager {
             dp: document.getElementById('descriptionPlus').value,
             c: {
                 
-                s: document.getElementById('showCause').checked ? 1 : 0,
-                i: document.getElementById('interim').checked ? 1 : 0,
-                p: document.getElementById('priority').checked ? 1 : 0
-              
+                ci: document.getElementById('civil').checked ? 1 : 0,
+                cr: document.getElementById('criminal').checked ? 1 : 0,
+                wo: document.getElementById('writ').checked ? 1 : 0,
+                coc: document.getElementById('contemptofCourt').checked ? 1 : 0,
+                oth: document.getElementById('others').checked ? 1 : 0
+                             
             },
             cp: document.getElementById('categoryPlus').value,
             u: document.getElementById('url').value,
@@ -178,9 +180,10 @@ class FormManager {
         document.getElementById('entryId').value = entry.i;
         document.getElementById('description').value = entry.d;
         document.getElementById('descriptionPlus').value = entry.dp || '';
-        document.getElementById('showCause').checked = entry.c.s === 1;
-        document.getElementById('interim').checked = entry.c.i === 1;
-        document.getElementById('priority').checked = entry.c.p === 1;
+        document.getElementById('civil').checked = entry.c.ci === 1;
+        document.getElementById('criminal').checked = entry.c.cr === 1;
+        document.getElementById('writ').checked = entry.c.wo === 1;
+        document.getElementById('others').checked = entry.c.oth === 1;
         document.getElementById('categoryPlus').value = entry.cp || '';
         document.getElementById('url').value = entry.u || '';
         document.getElementById('urlName').value = entry.un || '';
