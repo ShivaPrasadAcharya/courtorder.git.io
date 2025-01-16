@@ -134,8 +134,7 @@ class EntrySystem {
         if (categories.wo) {
             badges.push(`<span class="px-2 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">writ</span>`);
         }
-        }
-        if (categories.oth) {
+                if (categories.oth) {
             badges.push(`<span class="px-2 py-1 bg-red-100 text-red-800 rounded-full text-xs">others</span>`);
         }
         
