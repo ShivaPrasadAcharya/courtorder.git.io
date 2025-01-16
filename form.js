@@ -98,7 +98,6 @@ class FormManager {
                 ci: document.getElementById('civil').checked ? 1 : 0,
                 cr: document.getElementById('criminal').checked ? 1 : 0,
                 wo: document.getElementById('writ').checked ? 1 : 0,
-                coc: document.getElementById('contemptofCourt').checked ? 1 : 0,
                 oth: document.getElementById('others').checked ? 1 : 0
                              
             },
