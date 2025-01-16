@@ -132,7 +132,7 @@ class EntrySystem {
             badges.push(`<span class="px-2 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">criminal</span>`);
         }
         if (categories.wo) {
-            badges.push(`<span class="px-2 py-1 bg-purple-100 text-orange-800 rounded-full text-xs">writ</span>`);
+            badges.push(`<span class="px-2 py-1 bg-orange-100 text-orange-800 rounded-full text-xs">writ</span>`);
         }
                 if (categories.oth) {
             badges.push(`<span class="px-2 py-1 bg-red-100 text-red-800 rounded-full text-xs">others</span>`);
