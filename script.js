@@ -125,13 +125,16 @@ class EntrySystem {
     createCategoryBadges(categories) {
         const badges = [];
         
-        if (categories.s) {
+        if (categories.ci) {
             badges.push(`<span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs">Show Cause</span>`);
         }
-        if (categories.i) {
+        if (categories.cr) {
             badges.push(`<span class="px-2 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">Interim</span>`);
         }
-        if (categories.p) {
+        if (categories.wo) {
+            badges.push(`<span class="px-2 py-1 bg-purple-100 text-orange-800 rounded-full text-xs">Interim</span>`);
+        }
+        if (categories.oth) {
             badges.push(`<span class="px-2 py-1 bg-red-100 text-red-800 rounded-full text-xs">Priority</span>`);
         }
         
