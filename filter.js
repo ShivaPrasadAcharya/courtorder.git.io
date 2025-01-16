@@ -39,19 +39,24 @@ class FilterManager {
             <div class="filter-group">
                 <h4>Categories</h4>
                 <div class="filter-option">
-                    <input type="checkbox" id="filter-show-cause" 
-                        ${this.selectedCategories.has('showCause') ? 'checked' : ''}>
-                    <label for="filter-show-cause">Show Cause</label>
+                    <input type="checkbox" id="filter-civil" 
+                        ${this.selectedCategories.has('civil') ? 'checked' : ''}>
+                    <label for="filter-civil">civil</label>
                 </div>
                 <div class="filter-option">
-                    <input type="checkbox" id="filter-interim"
-                        ${this.selectedCategories.has('interim') ? 'checked' : ''}>
-                    <label for="filter-interim">Interim</label>
+                    <input type="checkbox" id="filter-criminal"
+                        ${this.selectedCategories.has('criminal') ? 'checked' : ''}>
+                    <label for="filter-criminal">criminal</label>
                 </div>
                 <div class="filter-option">
-                    <input type="checkbox" id="filter-priority"
-                        ${this.selectedCategories.has('priority') ? 'checked' : ''}>
-                    <label for="filter-priority">Priority</label>
+                    <input type="checkbox" id="filter-writ"
+                        ${this.selectedCategories.has('writ') ? 'checked' : ''}>
+                    <label for="filter-writ">writ</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="filter-others"
+                        ${this.selectedCategories.has('others') ? 'checked' : ''}>
+                    <label for="filter-others">others</label>
                 </div>
             </div>
         `;
@@ -117,9 +122,10 @@ class FilterManager {
         if (this.selectedCategories.size > 0) {
             filteredEntries = filteredEntries.filter(entry => {
                 return (
-                    (this.selectedCategories.has('showCause') && entry.c.s) ||
-                    (this.selectedCategories.has('interim') && entry.c.i) ||
-                    (this.selectedCategories.has('priority') && entry.c.p)
+                    (this.selectedCategories.has('civil') && entry.c.ci) ||
+                    (this.selectedCategories.has('criminal') && entry.c.cr) ||
+                    (this.selectedCategories.has('writ') && entry.c.wo) ||
+                    (this.selectedCategories.has('others') && entry.c.oth)
                 );
             });
         }
