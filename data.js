@@ -11,7 +11,7 @@ const initialData = {
             d: 'Example entry',
             dp: '',
             c: {
-                s:1, i:0, p:1
+                ci:1, cr:0, wo:0, oth:1
             },
             cp: 'High',
             u: '',
