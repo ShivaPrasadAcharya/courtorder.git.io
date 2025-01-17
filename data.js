@@ -7,7 +7,7 @@ const initialData = {
     key: 'entrySystem',
     entries: [
        {
-           i:'0001',d:'arun chaudhary, pil, locus standii, exaustion of alternative remedy, cb, writ quashed, election, basanta joshi, sc',dp:'ट्याक्टरमा आगो लगाएको कसूरमा सजाय भई कैद असुल उपर हुन बाँकी रहेको अवस्थामा झूठा विवरण भरी उमेद्वार भएको र निर्वाचन जितेपछि राष्ट्रपतिबाट कैद मिनाहा भएको ',c:{ci:0,cr:0,wo:1,oth:0},cp:'संक्षिप्त आदेश, निसु राखी रिट खारेज, ',u:'https://www.onlinekhabar.com/2025/01/1605647/arun-chaudharys-mp-post-saved-supreme-court-dismisses-writ',un:'ok khabar with order',dt:'2081-10-02'
+           i:'0002',d:'arun chaudhary, pil, locus standii, exaustion of alternative remedy, cb, writ quashed, election, basanta joshi, sc',dp:'ट्याक्टरमा आगो लगाएको कसूरमा सजाय भई कैद असुल उपर हुन बाँकी रहेको अवस्थामा झूठा विवरण भरी उमेद्वार भएको र निर्वाचन जितेपछि राष्ट्रपतिबाट कैद मिनाहा भएको ',c:{ci:0,cr:0,wo:1,oth:0},cp:'संक्षिप्त आदेश, निसु राखी रिट खारेज, ',u:'https://www.onlinekhabar.com/2025/01/1605647/arun-chaudharys-mp-post-saved-supreme-court-dismisses-writ',un:'ok khabar with order',dt:'2081-10-02'
        }
     ]
 };
